@@ -10,7 +10,7 @@
 }
 
 .btn {
-    background-color: #ff817e;
+    background-color: #fe3935;
     border-radius: 0;
     color: #fff;
     display: inline-block;
@@ -240,7 +240,7 @@
         flex-basis: 25%;
         position: relative;
         .service-hover {
-            background-color: rgba($color: #ff817e, $alpha: .9);
+            background-color: rgba($color: #fe3935, $alpha: .9);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -622,7 +622,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        color: #e57d80;
+        color: #fe3935;
         letter-spacing: 2.8px;
     }
     ul {
