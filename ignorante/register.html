@@ -18,7 +18,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
     <script data-dapp-detection="">
-        (function() {
+        (function () {
             let alreadyInsertedMetaTag = false
             //
             function __insertDappDetected() {
@@ -34,9 +34,9 @@
                 // Note a closure can't be used for this var because some sites like
                 // www.wnyc.org do a second script execution via eval for some reason.
                 window.__disableDappDetectionInsertion = true
-                    // Likely oldWeb3 is undefined and it has a property only because
-                    // we defined it. Some sites like wnyc.org are evaling all scripts
-                    // that exist again, so this is protection against multiple calls.
+                // Likely oldWeb3 is undefined and it has a property only because
+                // we defined it. Some sites like wnyc.org are evaling all scripts
+                // that exist again, so this is protection against multiple calls.
                 if (window.web3 === undefined) {
                     return
                 }
@@ -45,12 +45,12 @@
                 var oldWeb3 = window.web3
                 Object.defineProperty(window, 'web3', {
                     configurable: true,
-                    set: function(val) {
+                    set: function (val) {
                         if (!window.__disableDappDetectionInsertion)
                             __insertDappDetected()
                         oldWeb3 = val
                     },
-                    get: function() {
+                    get: function () {
                         if (!window.__disableDappDetectionInsertion)
                             __insertDappDetected()
                         return oldWeb3
@@ -126,31 +126,34 @@
                     <div class="form-field half-width">
                         <!--Colocar nome-->
                         <input type="text" placeholder="Nome completo" required="">
+                        <!--Colocar nome-->
+                        <input type="text" placeholder="RG" required="">
+                        <!--Colocar nome-->
+                        <input type="text" placeholder="CPF" required="">
                         <!--Colocar email-->
                         <input type="email" placeholder="Email" required="">
                     </div>
                     <div class="form-field half-width">
                         <div class="select-field">
                             <select>
-                  <!--Inicialmente só terá a doação tradicional-->
-                  <option>Selecione o tipo de doação</option>
-                  <option>Voluntária</option>
-                </select>
+                                <!--Inicialmente só terá a doação tradicional-->
+                                <option>Local da doação</option>
+                                <option>Santos - Hemocentro</option>
+                            </select>
                         </div>
-                        <!--Telefone para se conectar com a pessoa-->
-                        <input type="tel" placeholder="Whatsapp">
-                    </div>
+                        <div class="select-field">
+                            <select>
+                                <!--Inicialmente só terá a doação tradicional-->
+                                <option>Selecione o tipo de doação</option>
+                                <option>Voluntária</option>
+                            </select>
+                        </div>
                     <div class="form-field half-width">
-                        <!--Agendar dia e hora que queria doar sangue-->
-                        <input type="date" placeholder="Dia">
-                        <input type="time" placeholder="Horário">
-                    </div>
-                    <div class="form-field">
-                        <!--Área para diálogo inicial-->
-                        <textarea name="notes" placeholder="Endereço"></textarea>
-                    </div>
-                    <!--Botão para finalizar o cadastro-->
-                    <button class="btn btn-round">Quero cuidar da miha saúde</button>
+                            <!--Telefone para se conectar com a pessoa-->
+                            <input type="tel" placeholder="Whatsapp">
+                        </div>
+                            <!--Botão para finalizar o cadastro-->
+                            <button class="btn btn-round">Quero doar sangue</button>
                 </form>
             </div>
         </div>
@@ -179,7 +182,8 @@
                         <a href="#"><i class="ti-vimeo-alt"></i></a>
                         <a href="#"><i class="ti-instagram"></i></a>
                     </div>
-                    <p class="copyright">© Leandro Ramalho <a href="https://youtu.be/6R1JRLJGDt4">Aprenda inteligência artificial de graça.</a>.</p>
+                    <p class="copyright">© Leandro Ramalho <a href="https://youtu.be/6R1JRLJGDt4">Aprenda inteligência
+                            artificial de graça.</a>.</p>
                 </div>
             </div>
         </div>
